@@ -23,13 +23,25 @@ We will take problems from a series of books. In partciular, we will focus on:(i
 
 \section{Problem 1 GED}
 
-To approach the problem of being a snitch with respect to $100$ green eyed dragons I think it is better to reduce the scale first. 
+To approach the problem of being a snitch with respect to $100$ blue eyes white dragons I think it is better to reduce the scale first. 
 
-What if there was a single (possibly at this point insane) dragon and I told them \lq\lq Hey, at least one of you has green eyes\rq\rq. They would be confused (since it is only one). And would also now that they have for sure green eyes. And off to being a sparrow they go (whilst being pissy at me). 
+What if there was a single (possibly at this point insane) dragon and I told them \lq\lq Hey, at least one of you has blue eyes\rq\rq. They would be confused (since it is only one). And would also now that they have for sure blue eyes. And off to being a sparrow they go (whilst being pissy at me). 
 
-What if there are only two dragons now? I still snitch and say the same. Both dragons know that the other has green eyes. Now. Dragon Peppe knows that dragon Francesca has green eyes, and that dragon Francesca sees his eyes color. Both are logical. Logically, if dragon Francesca did not see dragon Peppe as green-eyed, she would know that she had green eyes and would need to go and transform. And the other way around for dragon Peppe with respect to dragon Francesca. They do not talk about eye color of course. But as midnight strikes and neither fulfills their sacred oath...SHOCK! They now both know that they must have green eyes. And thus, the next day they both transform at midnight. Sad ending unlocked. 
+What if there are only two dragons now? I still snitch and say the same. Both dragons know that the other has blue eyes. Now. Dragon Peppe knows that dragon Francesca has blue eyes, and that dragon Francesca sees his eyes colour. Both are logical. Logically, if dragon Francesca did not see dragon Peppe as blue-eyed, she would know that she had blue eyes and would need to go and transform. And the other way around for dragon Peppe with respect to dragon Francesca. They do not talk about eye colour of course. But as midnight strikes and neither fulfills their sacred oath...SHOCK! They now both know that they must have blue eyes. And thus, the next day they both transform at midnight. Sad ending unlocked. 
 
-Now, what happens when three dragons are there. Franesca, Peppe and Andrea. Well. From Peppe knows that Francesca and Andrea are gree-eyed. He also knows that Francesca also knows that Andrea is green-eyed as they both see him. And he knows that Andrea also sees Francesca as green-eyed. They are now all told that "at least one is green eyed". They do not talk about eye color at all. So no one mentions anything more. 
+Now, what happens when we consider $N = 3$ dragons? Franesca, Peppe and Andrea. Well. Peppe knows that Francesca and Andrea are blue-eyed. He also knows that Francesca also knows that Andrea is blue-eyed as they both see him. And he knows that Andrea also sees Francesca as blue-eyed. Of course, this is true for each dragon's perspective. But, what happens at midnight when the clock strikes? Well, no one transforms as all already see a dragon with blue eyes. But here the chain of \lq\lq oh, no, oh no...\rq\rq~ starts. Because, if no one transforms this means that at least two have blue eyes, and therefore (logic follow-up all three). Indeed, if only one (not at least one, but only one) had blue eyes, they would have had to transform, which means that actually two must have blue eyes. Now if one assumes to not be blue eyed, it reasons that the other two will understand that there are exactly two blue-eyed dragons. They will then transform. But midnight strikes and nothing happens! As such, they all conclude they must be blue-eyed. To understand the embarassing situation see Fig.~\ref{fig:blue_eyed}. Now, all transforms and Kaiba once again wins. That sneaky billionaire. 
+
+We can then see how this patters clearly propagates forward up to 100. So we conclude that 100 dragons will transform on the 100th night. Sad ending for real.
+\newpage
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{Plots/Kaiba.png}
+    \caption{Kaiba's pets in a deadlock.}
+    \label{fig:blue_eyed}
+\end{figure}
+
+\textit{Now, looking at the solution. It is way easier to see that if one reasons by \lq\lq the dragon I am considering removes himself from having blue eyes, then we have that a $N$ case reduces for the reaming dragons to the $N-1$ case\rq\rq, and it is then easy to prove for induction how things go. Damn it. It was better than mine.}
+
 
 
 

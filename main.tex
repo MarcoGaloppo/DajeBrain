@@ -21,7 +21,7 @@
 
 We will take problems from a series of books. In partciular, we will focus on:(i) \textit{The Green-Eyed Dragons and Other Mathematical Monsters}, by David Morin, (ii) \textit{Fifty Challenging Problems in Probability with Solutions}, by Frederick Mosteller, and (iii) \textit{The Green Book} by ..... These books will be referred in our index as GED, FC and GB respectively. God, I love a good sorting.
 
-\section{Problem 1 GED}
+\section{Problem 1 GED --- My name is better }
 
 To approach the problem of being a snitch with respect to $100$ blue eyes white dragons I think it is better to reduce the scale first. 
 
@@ -42,7 +42,7 @@ We can then see how this patters clearly propagates forward up to 100. So we con
 
 \textit{Now, looking at the solution. It is way easier to see that if one reasons by \lq\lq the dragon I am considering removes himself from having blue eyes, then we have that a $N$ case reduces for the reaming dragons to the $N-1$ case\rq\rq, and it is then easy to prove for induction how things go. Damn it. It was better than mine.}
 
-\section{Problem 2 GED}
+\section{Problem 2 GED --- Simpson's paradox}
 
 This one was not that complicated (thankfully) and I got it right on the first try --- may the Universe bless all the data I looked at. 
 
@@ -72,6 +72,25 @@ As such, it is clear that a simple choice like $x_{B|N+1} = 1$ would suffice. Th
 
 \textit{Now looking at the solution...nothing to add!}
 
+\section{Problem 25 GED --- Flipping a Coin}
+
+Well well well. This one I had fun with, but it is relatively well known as the gambler's ruin problem. 
+
+So, supposing we get an amount in dollars equal to the (fair) coin flips for before we obtain a tail (T). What is the expected value of the game. In this case, we can just consider a Markov chain that ends at T and write the following equations: 
+\begin{align*}
+    &E_{0} = 1 + \frac{1}{2}E_H \, ,\\
+    &E_{H} = 1 + \frac{1}{2}E_H \, ,
+\end{align*}
+with $E_0$ being the expected flips starting from a \lq\lq null state\rq\rq. You can guess $E_H$. We see that $E_0 = 2$. As such we expect to get back 2\$ on average. Or you know. Since we are just flipping coins, one could argue just $1/p$ as waiting time...
+
+Now, what would be the expected value if I got paid $2^{n-1}\$$. Eh, I do like that. A LOT. Why? Well because
+\begin{align*}
+    E[2^{n-1}] &= \sum_{i = 1}^{\infty}2^{n-1}P(n-1 \times \text{H, and then one T}) = \\
+    & = \sum_{i = 1}^{\infty}2^{n-1}\left(\frac{1}{2^n}\right) = \\& = \sum_{i = 1}^{\infty}\frac{1}{2} = +\infty \, .\\
+\end{align*}
+Take that Elon. Does it make sense? No, it does not form a single player perspective. Because no player plays all of the paths. The point is that here the dynamic is non-ergodic! 
+
+\textit{Solution added nothing. Actually, it missed the problem of having an additive dynamic to be ergodic. A win!}
 
 
 

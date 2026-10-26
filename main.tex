@@ -102,6 +102,23 @@ However, when two envelopes are placed in front of us by some tricky creature wi
 
 \textit{Looking at the solution now. Quite good. Goes into it deeply but does not mention randomization of the initial state, which I found interesting.}
 
+\section{Problem 27 GED --- Waiting for an Ace}
+
+Here, was my frist confident fail. I went: \lq\lq Well, I have 4 aces and 52 cards in total, so I have 1/13 chances of getting an ace out and the waiting time is going to be 13 cards on average\rq\rq
+
+Yes, very good. EXPECT NO, IT IS DAMN WRONG!Why? Cause we are not extracting with replacement. Then it would be correct. Not here though mate. Every time I extract a card which is not an Ace, the probability that the next card is an Ace is no more $1/13$ but it grows. After the first non-Ace we now have $4/51$, after the second $4/50$ and so on. It is clear that $13$ is an higher bound. The real number will be lower.
+
+How to think of it? Classic trick, i.e., sticks and stars. Place the Aces randomly on a table in  a straight line. Where to the other cards go between them? Well, we have $5$ positions where to put them (before the first Ace, between the Aces, and after the last Ace) and $48$ cards. As such, each \lq\lq Ace voids\rq\rq is $48/5 \approx 9.6$. So we are going to have $9.6 + 1 \, \text{(the Ace)}$ cards between Aces and before the first Ace (including it). Look at that absolutely not AI-generated picture we have in Fig.~\ref{fig:aces}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{Plots/PAIN.png}
+    \caption{It costs me my sanity to make this.}
+    \label{fig:aces}
+\end{figure}
+
+\textit{Looking at the solution. Really explains it well! A bit over the top with the circle, but really good!}
+
 
 
 

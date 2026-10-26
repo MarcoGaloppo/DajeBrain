@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
-
+\usepackage{amsmath}
 \title{Daje Sisyphus and daje Wu Gang}
 \date{}
 
@@ -41,6 +41,36 @@ We can then see how this patters clearly propagates forward up to 100. So we con
 \end{figure}
 
 \textit{Now, looking at the solution. It is way easier to see that if one reasons by \lq\lq the dragon I am considering removes himself from having blue eyes, then we have that a $N$ case reduces for the reaming dragons to the $N-1$ case\rq\rq, and it is then easy to prove for induction how things go. Damn it. It was better than mine.}
+
+\section{Problem 2 GED}
+
+This one was not that complicated (thankfully) and I got it right on the first try --- may the Universe bless all the data I looked at. 
+
+The point is very simple. Averages, and any other statistical measure, is dependent on the number of observations you are looking at. And quoting a statistical measure without specifying the number of points is ridiculous. For example. My math professor in high school once played with us at water-bottle-flipping during a random moment in time now lost forever (boredom good for your soul trust me). He played a single round, won, and retired as a true champion. His average of win per try at water-bottle-flipping per that year is one. Well, it is much higher than my average that year. But I tried many times (maybe too many, I was a really poor player). He tried once. His average and my average have different meanings. 
+
+Now, looking at the question. The solution is easy. Player B the second year played way less games (or whatever it is, not a baseball fan) then the first, in such a way that the average over the two years actually anchors to the first year for player B and to the average of the two years for player A.
+
+Example! Consider that both players have as averages for the first year $\bar{x}_A^{(1)} = 10$ and $\bar{x}_B^{(1)} = 9$, with $N =1000$ games each. But now, in the second year we have $\bar{x}_A^{(2)} = 2$ still for $N = 1000$ games, whilst we only have one single game played by player B which matters for our statistics. Namely, we have $\bar{x}_B^{(2)} = x_{B|N+1}$, where $x_{B|i}$ is the $i$-th observation for player B. We now want gauge at when 
+\begin{align*}
+     \bar{x}_B^{(1+2)} > \bar{x}_A^{(1+2)} \, ,
+\end{align*}
+is true given that $\bar{x}_A^{(1)} > \bar{x}_B^{(1)} $ and $\bar{x}_A^{(2)} > \bar{x}_B^{(2)} $ are satisfied. Well, we see that 
+\begin{align*}
+     &\bar{x}_B^{(1+2)} > \bar{x}_A^{(1+2)} \, \\ 
+     &\Rightarrow  \frac{1}{N+1}\sum_{i=1}^{N+1}x_{B|i} > \frac{1}{2N}\sum_{i=1}^{2N}x_{A|i}\\
+     &\Rightarrow  \frac{N}{N+1}\bar{x}_{B}^{(1)}+ \frac{x_{B|N+1}}{N+1}> \frac{1}{2}\left(\bar{x}_{A}^{(1)}+\bar{x}_{A}^{(2)}\right)\\
+      &\Rightarrow  {x_{B|N+1}}> \frac{N+1}{2}\left(\bar{x}_{A}^{(1)}+\bar{x}_{A}^{(2)} -\frac{2N}{N+1}\bar{x}_{B}^{(1)} \right) \, .
+\end{align*}
+For $N = 10$,  $\bar{x}_A^{(1)} = 12/11$ and $\bar{x}_A^{(2)} = 9/11$ and $\bar{x}_B^{(1)} = 1$ we have as sufficient condition
+\begin{equation*}
+     {x_{B|N+1}}> 0 \, .
+\end{equation*}
+As such, it is clear that a simple choice like $x_{B|N+1} = 1$ would suffice. The point is always that when averaging different samples, the weights matter, i.e.,
+\begin{equation*}
+    \bar{x}^{(1+2)} = \frac{N_1}{N_1+N_2}\bar{x}^{(1)} + \frac{N_2}{N_1+N_2}\bar{x}^{(2)} \, .
+\end{equation*}
+
+\textit{Now looking at the solution...nothing to add!}
 
 
 
